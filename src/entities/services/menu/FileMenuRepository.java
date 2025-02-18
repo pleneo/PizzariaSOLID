@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileMenuRepository implements MenuRepository {
 
-    private final Path FILE_PATH = Paths.get("C:\\Users\\pleneo\\Documents\\Programming\\Java\\Nathalino\\ProjetoPizzariaSOLID\\src\\database\\customers.txt");
+    private final Path FILE_PATH = Paths.get("C:\\Users\\pleneo\\Documents\\Programming\\Java\\Nathalino\\ProjetoPizzariaSOLID\\src\\database\\menu.txt");
     private final String SEPARATOR = "|";
 
     public FileMenuRepository() {
