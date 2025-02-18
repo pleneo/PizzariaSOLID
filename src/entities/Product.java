@@ -3,16 +3,16 @@ package entities;
 public class Product {
     private String name;
     private int category; //1 = pizza, 2 = bebida
-    private Double price;
-    private int size;
-    // 1 - small, 2- medium, 3 - large. for pizza and drinks.
+    private Double smallPrice;
+    private Double mediumPrice;
+    private Double largePrice;
 
-
-    public Product(String name, int category, Double price, int size) {
+    public Product(String name, int category, Double smallPrice, Double mediumPrice, Double largePrice) {
         this.name = name;
         this.category = category;
-        this.price = price;
-        this.size = size;
+        this.smallPrice = smallPrice;
+        this.mediumPrice = mediumPrice;
+        this.largePrice = largePrice;
     }
 
     public String getName() {
@@ -23,11 +23,15 @@ public class Product {
         return category;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getSmallPrice() {
+        return smallPrice;
     }
 
-    public int getSize() {
-        return size;
+    public Double getMediumPrice() {
+        return mediumPrice;
+    }
+
+    public Double getLargePrice() {
+        return largePrice;
     }
 }

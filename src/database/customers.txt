@@ -1,1 +1,2 @@
-Texto a ser adicionado
+Pepperoni|1|14.5|15.5|25.5
+Pepperoni|1|14.5|15.5|25.5

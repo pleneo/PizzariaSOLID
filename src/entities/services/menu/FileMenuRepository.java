@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileMenuRepository implements MenuRepository {
 
-    private final Path FILE_PATH = Paths.get("src/database/menu.txt");
+    private final Path FILE_PATH = Paths.get("C:\\Users\\pleneo\\Documents\\Programming\\Java\\Nathalino\\ProjetoPizzariaSOLID\\src\\database\\customers.txt");
     private final String SEPARATOR = "|";
 
     public FileMenuRepository() {
@@ -17,7 +17,11 @@ public class FileMenuRepository implements MenuRepository {
 
     @Override
     public void addProduct(Product product) {
-        String productFormattedString = product.getName()+SEPARATOR+product.getCategory()+SEPARATOR+product.getPrice()+SEPARATOR+product.getSize();
+        String productFormattedString = product.getName()+
+                SEPARATOR+product.getCategory()+
+                SEPARATOR+product.getSmallPrice()+
+                SEPARATOR+product.getMediumPrice()+
+                SEPARATOR+product.getLargePrice();
 
         FileWriter fw = new FileWriter(FILE_PATH, productFormattedString);
         fw.appendWrite();

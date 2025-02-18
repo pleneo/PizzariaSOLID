@@ -19,7 +19,7 @@ public class FileWriter implements FileWrite{
     @Override
     public void appendWrite() {
         try{
-            Files.write(FILE_PATH, message.getBytes(), StandardOpenOption.APPEND, StandardOpenOption.CREATE);
+            Files.write(FILE_PATH, (message + System.lineSeparator()).getBytes(), StandardOpenOption.APPEND, StandardOpenOption.CREATE);
         }catch (IOException e){
             System.out.println("Erro ao escrever no arquivo " + FILE_PATH);
         }
