@@ -48,6 +48,6 @@ public class FilePizzariaRepository implements PizzariaRepository {
 
     @Override
     public Pizzaria getPizzariaByID(int id) {
-        return null;
+        return getPizzarias().get(id);
     }
 }

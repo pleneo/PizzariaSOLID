@@ -1,10 +1,12 @@
 package entities;
 
+import java.util.List;
+
 public class Menu {
 
-    private Product[] items;
+    private List<Product> items;
 
-    public Menu(Product[] items) {
+    public Menu(List<Product> items) {
         this.items = items;
     }
 }

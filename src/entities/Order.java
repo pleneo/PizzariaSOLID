@@ -1,17 +1,24 @@
 package entities;
 
-public class Order {
-    private Product[] products;
+import java.util.List;
 
-    public Order(Product[] products) {
+public class Order {
+    private List<ProductForOrder> products;
+    private Customer customer;
+
+    public Order(List<ProductForOrder> products, Customer customer) {
         this.products = products;
     }
 
-    public Product[] getProducts() {
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public List<ProductForOrder> getProducts() {
         return products;
     }
 
-    protected void setProducts(Product[] products) {
+    protected void setProducts(List<ProductForOrder> products) {
         this.products = products;
     }
 }

@@ -1,11 +1,13 @@
 package entities;
 
+import java.util.List;
+
 public class Pizzaria {
     private String name;
     private String address;
     private String phone;
     private Menu menu;
-    private Order[] orders;
+    private List<Order> orders;
 
     public Pizzaria(String name, String address, String phone) {
         this.name = name;
@@ -23,5 +25,9 @@ public class Pizzaria {
 
     public String getPhone() {
         return phone;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 }

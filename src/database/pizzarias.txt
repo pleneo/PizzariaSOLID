@@ -1,5 +1,5 @@
-pizzaria|address|8888
-pizzaria|address|8888
-pizzaria|addres|8882
-pizzaria|adds|888
-pizzaria|ress|88
+pizzari|address|8888
+pizzar|address|8888
+pizza|addres|8882
+pizz|adds|888
+piz|ress|88

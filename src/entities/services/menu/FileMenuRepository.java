@@ -50,6 +50,6 @@ public class FileMenuRepository implements MenuRepository {
 
     @Override
     public Product getProductByID(int id) {
-        return null;
+        return getProducts().get(id);
     }
 }
