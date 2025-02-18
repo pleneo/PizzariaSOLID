@@ -1,10 +1,12 @@
 package entities.services.pizzaria;
 
 import entities.Pizzaria;
+import entities.services.filesHandler.FileReader;
 import entities.services.filesHandler.FileWriter;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FilePizzariaRepository implements PizzariaRepository {
@@ -33,7 +35,15 @@ public class FilePizzariaRepository implements PizzariaRepository {
 
     @Override
     public List<Pizzaria> getPizzarias() {
-        return null;
+        FileReader fr = new FileReader();
+        List<String> lines = fr.getFileLines(FILE_PATH);
+        List<Pizzaria> pizzarias = new ArrayList<>();
+        for(String s : lines){
+            String[] strs = s.split("\\|");
+
+            pizzarias.add(new Pizzaria(strs[0], strs[1], strs[2]));
+        }
+        return pizzarias;
     }
 
     @Override

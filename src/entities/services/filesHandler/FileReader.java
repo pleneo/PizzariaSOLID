@@ -8,14 +8,12 @@ import java.util.List;
 
 public class FileReader implements FileRead {
 
-    private Path FILE_PATH;
 
-    public FileReader(Path FILE_PATH) {
-        this.FILE_PATH = FILE_PATH;
-    }
+
+    public FileReader() {    }
 
     @Override
-    public List<String> getFileLines() {
+    public List<String> getFileLines(Path FILE_PATH) {
         List<String> lines = new ArrayList<>();
         try {
             java.io.FileReader fr = new java.io.FileReader(FILE_PATH.toString());
@@ -35,7 +33,7 @@ public class FileReader implements FileRead {
     }
 
     @Override
-    public String getLineByIndex(int index) {
+    public String getLineByIndex(Path FILE_PATH,int index) {
         String line = null;
         try {
             java.io.FileReader fr = new java.io.FileReader(FILE_PATH.toString());
