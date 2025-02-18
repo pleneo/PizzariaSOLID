@@ -1,10 +1,13 @@
 package entities.services.menu;
 
+import entities.Pizzaria;
 import entities.Product;
+import entities.services.filesHandler.FileReader;
 import entities.services.filesHandler.FileWriter;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileMenuRepository implements MenuRepository {
@@ -34,7 +37,15 @@ public class FileMenuRepository implements MenuRepository {
 
     @Override
     public List<Product> getProducts() {
-        return null;
+        FileReader fr = new FileReader();
+        List<String> lines = fr.getFileLines(FILE_PATH);
+        List<Product> products = new ArrayList<>();
+        for(String s : lines){
+            String[] strs = s.split("\\|");
+
+            products.add(new Product(strs[0],Integer.parseInt(strs[1]), Double.parseDouble(strs[2]),Double.parseDouble(strs[3]), Double.parseDouble(strs[4])));
+        }
+        return products;
     }
 
     @Override
